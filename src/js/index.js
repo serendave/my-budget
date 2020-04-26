@@ -18,6 +18,8 @@ import * as budgetView from "./views/budgetView";
 const state = {};
 initialization();
 
+// This is test
+
 /**
  * ADD ITEM
  */
