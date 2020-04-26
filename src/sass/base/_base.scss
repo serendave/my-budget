@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // 10px / 16px = 62.5%
+
+    @media (max-width: 1000px) {
+        font-size: 56.25%; // 9px
+    }
+
+    @media (max-width: 700px) {
+        font-size: 50%; // 8px
+    }
+}
+
+body {
+    box-sizing: border-box;
+    color: var(--dark-color);
+    background-color: #fff;
+    background-image: url(../img/phone-1-blurred.jpg);
+    background-size: cover;
+    background-position: top;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    font-weight: 400;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

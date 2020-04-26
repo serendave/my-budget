@@ -1,0 +1,68 @@
+.btn {
+    border: none;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+
+    &--big {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    &--middle {
+        width: 4rem;
+        height: 4rem;
+        font-size: 4rem;
+    }
+
+    &--small {
+        width: 3rem;
+        height: 3rem;
+        font-size: 2.5rem;
+        transform: translateY(.2rem);
+        opacity: 0;
+        transition: all .2s;
+
+        &:hover {
+            color: var(--white-color-dark);
+        }
+    }
+    
+    &-currency {
+        background-color: var(--tertiary-color);
+        color: var(--white-color);
+        transition: all .3s;
+        font-size: 3rem;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--tertiary-color-dark); 
+            color: var(--white-color-dark);
+        }
+    }
+
+    &-add {
+        color: var(--secondary-color);
+        transition: all .1s;
+        margin-right: 1.5rem;
+        cursor: pointer;
+        
+        &:hover {
+            color: var(--secondary-color-light);
+            transform: scale(1.05);   
+        }
+    }
+
+    &--edit, &--delete { color: var(--white-color); }
+
+    &-finish {
+        color: var(--secondary-color);
+        transition: all .1s;
+
+        &:hover {
+            color: var(--secondary-color-light);
+        }
+    }
+}

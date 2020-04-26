@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <title>myBudget 2019</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="top__heading">
+                <div class="top__heading-text">myBudget 2019</div>
+            </div>
+
+            <div class="total">
+                <div class="total__sum">
+                    <span class="total__sum-text">Total:</span>
+                    <span class="total__sum-number">20,000.00</span>  
+                    <span class="total__sum-currency">UAH</span>
+                </div>
+
+                <div class="total__currency">
+                    <button class="btn btn--big btn-currency total__uah">&#8372;</button>
+                    <button class="btn btn--big btn-currency total__euro">&euro;</button>
+                    <button class="btn btn--big btn-currency total__dollar">&dollar;</button>
+                </div>
+            </div>
+
+            <div class="currencies">
+                <div class="currency currency--uah">
+                    <span class="currency__sum">3,000.00 UAH</span>
+                    <!-- <span class="currency__sign"></span> -->
+
+                    <div class="currency__other-currencies">
+
+                    </div>
+                </div>
+
+                <div class="currency currency--euro">
+                    <span class="currency__sum">180.00 &euro;</span>
+                    <!-- <span class="currency__sign"></span> -->
+
+                    <div class="currency__other-currencies">
+                        
+                    </div>
+                </div>
+
+                <div class="currency currency--dollar">
+                    <span class="currency__sum">250.00 &dollar;</span>
+                    <!-- <span class="currency__sign"></span> -->
+
+                    <div class="currency__other-currencies">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="incomes">
+                <div class="title">
+                    <div class="title__text">Incomes</div>
+                    <button class="btn btn--middle btn-add">
+                        <i class="icon ion-ios-add-circle-outline"></i>
+                    </button>
+
+                    <div class="title__add">
+                        <input type="text" class="title__add-name" name="name" id="name" placeholder="Description">
+                        <input type="number" class="title__add-value" name="value" id="value" placeholder="Value">
+                        <select name="select" class="title__add-currency">
+                            <option value="uah">UAH</option>
+                            <option value="euro">&euro;</option>
+                            <option value="dollar">&dollar;</option>
+                        </select>
+                        <button class="btn btn--middle btn-finish title__add-btn add--income">
+                            <i class="icon ion-ios-checkmark-circle-outline"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="items items--incomes">
+                    <!-- <div class="item item--income">
+                        <div class="item__name">Project</div>
+                        <div class="item__value">3000 $</div>
+                        <div class="item__edit-form">
+                            <input type="text" name="description" class="item__edit-name" placeholder="Description">
+                            <input type="number" name="value" class="item__edit-value" placeholder="Value">
+                            <select class="item__edit-currency">
+                                <option value="uah">UAH</option>
+                                <option value="euro">&euro;</option>
+                                <option value="dollar">&dollar;</option>
+                            </select>
+                            <button class="btn btn--middle btn-finish item__edit-finish">
+                                <i class="icon ion-ios-checkmark-circle-outline"></i>
+                            </button>
+                        </div>
+                        <div class="item__edit">
+                            <button class="btn btn--small btn--edit">
+                                <i class="icon ion-md-create"></i>
+                            </button> 
+                        </div>
+                        <div class="item__delete">
+                            <button class="btn btn--small btn--delete">
+                                <i class="icon ion-md-close"></i>
+                            </button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="expenses">
+                <div class="title">
+                    <div class="title__text">Expenses</div>
+                    <button class="btn btn--middle btn-add">
+                        <i class="icon ion-ios-add-circle-outline"></i>
+                    </button>
+
+                    <div class="title__add">
+                        <input type="text" class="title__add-name" name="name" placeholder="Description">
+                        <input type="number" class="title__add-value" name="value" placeholder="Value">
+                        <select name="select" id="" class="title__add-currency">
+                            <option value="uah">UAH</option>
+                            <option value="euro">&euro;</option>
+                            <option value="dollar">&dollar;</option>
+                        </select>
+                        <button class="btn btn--middle btn-finish title__add-btn add--expense">
+                            <i class="icon ion-ios-checkmark-circle-outline"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="items items--expenses">
+                    <!-- <div class="item item--expense">
+                        <div class="item__name">PlayStation 4</div>
+                        <div class="item__value">400 $</div>
+                        <div class="item__edit">
+                            <button class="btn btn--small btn--edit">
+                                <i class="icon ion-md-create"></i>
+                            </button> 
+                        </div>
+                        <div class="item__delete">
+                            <button class="btn btn--small btn--delete">
+                                <i class="icon ion-md-close"></i>
+                            </button>
+                        </div> 
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

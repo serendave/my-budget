@@ -1,0 +1,42 @@
+.currencies {
+    display: flex;
+}
+
+.currency {
+    flex: 0 0 33.33334%;
+    padding: 3rem;
+    text-align: center;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    font-weight: 300;
+
+    @media (max-width: 900px) {
+        padding: 2rem;
+    }
+
+    @media (max-width: 400px) {
+        padding: 1rem;
+    }
+
+    &:not(:last-child) {
+        border-right: var(--border);
+    }
+
+    &__sum {
+        font-size: 4rem;
+        margin-right: 1.5rem;
+
+        @media (max-width: 900px) {
+            margin: 0;
+            font-size: 3.5rem;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 3rem;
+        }
+    }
+
+    &__sign {
+        font-size: 3rem;
+    }
+}

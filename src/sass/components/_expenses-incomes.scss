@@ -1,0 +1,198 @@
+.title {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    
+    &__text {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        margin-right: 1rem;
+    }
+
+    &__add {
+        width: 70%;
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s;
+
+        &-name {
+            width: 40%;
+        }
+
+        &-value {
+            width: 30%;
+        }
+
+        & > *:not(:last-child) {
+            margin-right: .5rem;
+        }
+
+        &-name, 
+        &-value,
+        &-currency {
+            outline: none;
+            padding: 1rem 1.2rem;
+            color: var(--dark-color-light);
+            font-family: inherit;
+            border: 1px solid var(--grey-color-light);
+            font-size: 1.4rem;
+            background-color: var(--white-color);
+            border-radius: 5px;
+
+            &:focus {
+                border: 1px solid var(--secondary-color);
+            }
+        }
+
+        &--visible {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+// COMMON
+
+.expenses, .incomes { 
+    width: 50%;
+
+    @media (max-width: 700px) {
+        width: 100%;
+        height: min-content;
+        // overflow: scroll;
+    }
+}
+
+.items {
+    min-height: 30rem;
+    padding: 1rem 0;
+    height: 100%;
+}
+
+.item {
+    height: 5.5rem;
+    margin: 1rem 1.5rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    border-radius: .8rem;
+    font-size: 2rem;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:first-child { margin-top: 0; }
+
+    &__name { flex: 1; }
+
+    &__value {
+        transition: all .2s;
+        margin-right: 1rem;
+        transform: translateX(6.5rem);
+    }
+
+    &__edit-form {
+        display: none;
+        height: 0;
+        opacity: 0;
+        transition: all .3s;
+        margin-right: 2rem;
+    }
+
+    &__edit-name { width: 40%; }
+    &__edit-value { width: 30%; }
+
+    &__edit-name,
+    &__edit-value,
+    &__edit-currency {
+        outline: none;
+        padding: .8rem 1rem;
+        color: var(--dark-color-light);
+        font-family: inherit;
+        border: 1px solid var(--grey-color-light);
+        font-size: 1.4rem;
+        background-color: var(--white-color);
+        border-radius: .5rem;
+
+        &:focus {
+            border: 1px solid var(--income-color);
+        }
+    }
+
+    // &__name, &__value { top: 0; }
+
+    &__edit, &__delete { visibility: hidden; }
+
+    &--income {
+        background-color: var(--income-color);
+        &:hover { background-color: var(--income-color-focus); }
+    }
+
+    &--expense {
+        background-color: var(--expense-color);
+        &:hover { background-color: var(--expense-color-focus); }
+    }
+
+    &:hover &__value { transform: translateX(0); }
+
+    &:hover .btn--small { opacity: 1; }
+
+    &:hover &__edit, &:hover &__delete { visibility: visible; }
+
+    // EDITING ITEM
+
+    &--editing {
+        padding-top: 1.8rem;
+        padding-bottom: 0;
+        height: 8.5rem;
+        position: relative;
+        transition: all .3s;
+    }
+
+    &--editing &__edit-form {
+        display: block;
+        display: flex;
+        height: 4rem;
+        opacity: 1;
+    }
+
+    &--editing &__name, 
+    &--editing &__value {
+        position: absolute;
+        top: .3rem;
+        font-size: 1.4rem;
+        transition: all .3s;
+    }
+
+    &--editing &__edit-name, 
+    &--editing &__edit-value,
+    &--editing &__edit-currency { margin-right: .5rem; }
+
+    &--editing &__edit-finish { 
+        color: var(--white-color);
+
+        &:hover { color: var(--white-color-dark); }
+    }
+
+    &--editing:hover &__value { transform: translateX(6.5rem); }
+
+    &--editing .btn--edit {
+        color: var(--secondary-color);
+
+        &:hover { color: var(--secondary-color-dark); }
+    }
+}
+
+// INCOMES
+
+.items--incomes { 
+    border-right: 3px solid var(--dark-color);
+
+    @media (max-width: 700px) {
+        border: 0;
+    }
+}

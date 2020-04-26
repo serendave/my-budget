@@ -1,0 +1,31 @@
+:root {
+    // COLORS
+    --primary-color: #f44336;
+    --primary-color-dark: #D32F2F;
+    --primary-color-light: #f5645a;
+
+    --secondary-color: #FF9800;
+    --secondary-color-light: #ffa622;
+    --secondary-color-dark: #dd8400;
+
+    --tertiary-color: #3F51B5;
+    --tertiary-color-dark: #303F9F;
+
+    --income-color: #0faa0fea;
+    --income-color-focus: #0c8b0c;
+    --expense-color: #e63f39e5;
+    --expense-color-focus: #e1231c;
+
+    --dark-color: #212121;
+    --dark-color-light: #414141;
+
+    --grey-color: #757575;
+    --grey-color-light: #BDBDBD;
+
+    --white-color: #fff;
+    --white-color-dark: #eee;
+
+    // BORDERS
+    --border: 2px solid var(--dark-color);
+
+}

@@ -1,0 +1,57 @@
+.total {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @media (max-width: 500px) {
+        margin-left: 5%;
+        flex-wrap: wrap;
+        padding: 2rem;
+    }
+
+    &__sum {
+        margin: 2rem;
+        margin-left: 35%;
+        font-size: 3.5rem;
+        font-weight: 300;
+
+        @media (max-width: 900px) {
+            margin-left: 5%;
+        }
+
+        @media (max-width: 500px) {
+            margin: 0;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 3rem;
+        }
+
+        &-text {
+            text-transform: uppercase;
+        }
+
+        &-number {
+            margin: .5rem 0;
+        }
+    }
+
+    &__currency {
+        margin-right: 5rem;
+
+        @media (max-width: 500px) {
+            margin: 0;
+        }
+
+        & > * {
+            &:not(:last-child) {
+                margin-right: .5rem;
+            }
+        }
+    }
+
+    &--active {
+        background-color: var(--secondary-color) !important;
+        transition:  all .2s !important;
+    }
+}
