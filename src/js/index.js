@@ -106,8 +106,6 @@ const editItem = (type, id) => {
 }
 
 
-
-
 /**
  * OTHER FUNCTIONS
  */
