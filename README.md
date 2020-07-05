@@ -13,4 +13,5 @@ or
 yarn
 yarn start
 ```
-## Finished version of this app you can see [here](http://hamster-156.getforge.io/) 
+## Finished version
+Finished version of this app you can see [here](http://hamster-156.getforge.io/) 
